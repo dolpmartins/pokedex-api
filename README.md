@@ -2,7 +2,7 @@
 
 Este projeto será uma API de personagens dos jogos da franquia Pokémon, permitindo consultar informações sobre os Pokémon e outros personagens que aparecem nos jogos.
 
-> Status: estrutura inicial. Por enquanto, a aplicação apenas imprime uma mensagem de boas-vindas.
+> Status: em desenvolvimento. Por enquanto, a aplicação busca os dados do Pikachu na [PokéAPI](https://pokeapi.co) e imprime o nome e a altura.
 
 ## Estrutura
 
@@ -10,6 +10,7 @@ Este projeto será uma API de personagens dos jogos da franquia Pokémon, permit
 pokedex-api/
 ├── app/
 │   ├── __init__.py
+│   ├── pokeapi.py
 │   └── main.py
 ├── .gitignore
 ├── requirements.txt
@@ -25,7 +26,7 @@ pokedex-api/
    source .venv/bin/activate   # Windows: .venv\Scripts\activate
    ```
 
-2. Instale as dependências (ainda vazias):
+2. Instale as dependências:
 
    ```bash
    pip install -r requirements.txt
@@ -41,4 +42,6 @@ pokedex-api/
 
    ```
    Hello, treinador!
+   Nome: pikachu
+   Altura: 4
    ```

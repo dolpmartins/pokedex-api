@@ -10,6 +10,7 @@ Este projeto será uma API de personagens dos jogos da franquia Pokémon, permit
 pokedex-api/
 ├── app/
 │   ├── __init__.py
+│   ├── exceptions.py
 │   ├── models.py
 │   ├── pokeapi.py
 │   └── main.py
@@ -52,3 +53,8 @@ pokedex-api/
    ```
 
    A documentação interativa da API fica em http://127.0.0.1:8000/docs.
+
+   Possíveis erros:
+
+   - **404**: o personagem não existe na PokéAPI.
+   - **503**: não foi possível conectar à PokéAPI (fora do ar ou sem resposta).

@@ -1,14 +1,11 @@
+from fastapi import FastAPI
+
+from app.models import Personagem
 from app.pokeapi import buscar_personagem
 
-
-def main() -> None:
-    print("Hello, treinador!")
-    personagem = buscar_personagem("pikachu")
-    print(f"Nome: {personagem.nome}")
-    print(f"Altura: {personagem.altura}")
-    print(f"Peso: {personagem.peso}")
-    print(f"Tipos: {', '.join(personagem.tipos)}")
+app = FastAPI(title="Pokédex API")
 
 
-if __name__ == "__main__":
-    main()
+@app.get("/personagens/{nome}")
+def obter_personagem(nome: str) -> Personagem:
+    return buscar_personagem(nome)

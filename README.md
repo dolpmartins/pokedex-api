@@ -2,7 +2,7 @@
 
 Este projeto será uma API de personagens dos jogos da franquia Pokémon, permitindo consultar informações sobre os Pokémon e outros personagens que aparecem nos jogos.
 
-> Status: em desenvolvimento. Por enquanto, a aplicação busca os dados do Pikachu na [PokéAPI](https://pokeapi.co) e imprime nome, altura, peso e tipos.
+> Status: em desenvolvimento. Por enquanto, a API tem o endpoint `GET /personagens/{nome}`, que busca o personagem na [PokéAPI](https://pokeapi.co) e devolve nome, altura, peso e tipos em JSON.
 
 ## Estrutura
 
@@ -33,18 +33,22 @@ pokedex-api/
    pip install -r requirements.txt
    ```
 
-3. Execute a aplicação:
+3. Inicie o servidor:
 
    ```bash
-   python -m app.main
+   uvicorn app.main:app --reload
    ```
 
-   Saída esperada:
+4. Consulte um personagem em http://127.0.0.1:8000/personagens/pikachu:
 
+   ```bash
+   curl http://127.0.0.1:8000/personagens/pikachu
    ```
-   Hello, treinador!
-   Nome: pikachu
-   Altura: 4
-   Peso: 60
-   Tipos: electric
+
+   Resposta esperada:
+
+   ```json
+   {"nome": "pikachu", "altura": 4, "peso": 60, "tipos": ["electric"]}
    ```
+
+   A documentação interativa da API fica em http://127.0.0.1:8000/docs.

@@ -21,6 +21,8 @@ pokedex-api/
 
 ## Como executar
 
+Requer Python 3.9 ou mais recente.
+
 1. Crie e ative o ambiente virtual:
 
    ```bash

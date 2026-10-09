@@ -8,3 +8,6 @@ __pycache__/
 
 # Variáveis de ambiente
 .env
+
+# Cache do pytest
+.pytest_cache/

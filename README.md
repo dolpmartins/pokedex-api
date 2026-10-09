@@ -14,8 +14,12 @@ pokedex-api/
 │   ├── models.py
 │   ├── pokeapi.py
 │   └── main.py
+├── tests/
+│   └── test_personagens.py
 ├── .gitignore
+├── pyproject.toml
 ├── requirements.txt
+├── requirements-dev.txt
 └── README.md
 ```
 
@@ -60,3 +64,14 @@ Requer Python 3.9 ou mais recente.
 
    - **404**: o personagem não existe na PokéAPI.
    - **503**: não foi possível conectar à PokéAPI (fora do ar ou sem resposta).
+
+## Como rodar os testes
+
+Instale as dependências de desenvolvimento (já incluem as da aplicação) e rode o pytest:
+
+```bash
+pip install -r requirements-dev.txt
+pytest -v
+```
+
+Os testes simulam as respostas da PokéAPI, então funcionam sem internet.
